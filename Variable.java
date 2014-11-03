@@ -8,14 +8,18 @@ public class Variable
         this.varType = varType;
         this.varName = varName;
     }
+    public String getVarType()
+    {
+        return this.varType;
+    }
 
     public String getVarName()
     {
         return this.varName;
     }
 
-    public String getVarType()
+    public String toString()
     {
-        return this.varType;
+        return getVarType() + " " + getVarName();
     }
 }
