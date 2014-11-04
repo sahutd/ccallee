@@ -1,6 +1,8 @@
 import org.junit.*;
 import static org.junit.Assert.*;
 
+import java.util.Iterator;
+
 public class testList
 {
     private List<Integer> list;
@@ -42,5 +44,35 @@ public class testList
 
         assertEquals(x.getNext(), y);
         assertEquals(y.getNext(), z);
+
+    }
+
+    @Test
+    public void testEmptyIterator()
+    {
+        Iterator<Integer> it = list.iterator();
+        assertFalse(it.hasNext());
+    }
+
+    @Test
+    public void testIterator()
+    {
+        Node<Integer>x = new Node<Integer>(new Integer(5));
+        Node<Integer>y = new Node<Integer>(new Integer(10));
+        Node<Integer>z = new Node<Integer>(new Integer(15));
+
+        list.insertAtEnd(x);
+        list.insertAtEnd(y);
+        list.insertAtEnd(z);
+
+        Iterator<Integer> it = list.iterator();
+
+        assertTrue(it.hasNext());
+        assertEquals(it.next(), (Integer)5);
+        assertTrue(it.hasNext());
+        assertEquals(it.next(), (Integer)10);
+        assertTrue(it.hasNext());
+        assertEquals(it.next(), (Integer)15);
+        assertTrue(it.hasNext());
     }
 }

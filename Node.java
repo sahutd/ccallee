@@ -17,4 +17,9 @@ public class Node<T>
     {
         return this.next;
     }
+
+    public T getKey()
+    {
+        return this.key;
+    }
 }
