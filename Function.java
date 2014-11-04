@@ -4,7 +4,7 @@ public class Function
     private argumentList<Variable> argList;
     private String returnType;
 
-    public Function(String name, argumentList<Variable> arglist,
+    public Function(String name, argumentList<Variable> argList,
                     String returnType)
     {
         this.name = name;
@@ -15,7 +15,7 @@ public class Function
     public String toString()
     {
         String repr;
-        repr = returnType + " " + name + "(" + argList.toString() + ")";
+        repr = returnType + " " + name + "(" + argList + ")";
         return repr;
     }
 }

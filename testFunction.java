@@ -20,12 +20,12 @@ public class testFunction
         argList.addVariable(int_a);
         argList.addVariable(float_b);
         argList.addVariable(char_c);
+        fn = new Function("add", argList, "int");
     }
 
     @Test
     public void testSimpleFunctionToString()
     {
-        fn = new Function("add", argList, "int");
         assertEquals(fn.toString(), "int add(int a, float b, char c)");
     }
 }
