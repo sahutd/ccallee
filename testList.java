@@ -73,6 +73,6 @@ public class testList
         assertEquals(it.next(), (Integer)10);
         assertTrue(it.hasNext());
         assertEquals(it.next(), (Integer)15);
-        assertTrue(it.hasNext());
+        assertFalse(it.hasNext());
     }
 }
