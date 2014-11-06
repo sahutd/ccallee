@@ -29,4 +29,9 @@ public class graphNode
     {
         return outEdges.iterator();
     }
+
+    public Function getKey()
+    {
+        return this.key;
+    }
 }
