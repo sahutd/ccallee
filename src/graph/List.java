@@ -1,9 +1,10 @@
+package ccallee.graph;
 import java.util.Iterator;
 
 public class List<T> implements Iterable<T>
 {
-    Node<T> head;
-    Node<T> tail;
+    protected Node<T> head;
+    protected Node<T> tail;
 
     public List()
     {

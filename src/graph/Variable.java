@@ -1,3 +1,4 @@
+package ccallee.graph;
 public class Variable
 {
     private final String varType;
