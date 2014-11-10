@@ -77,6 +77,32 @@ public class testList
     }
 
     @Test
+    public void testDeleteAtHeadSingleElementList()
+    {
+        Node<Integer>x = new Node<Integer>(new Integer(5));
+        list.insertAtHead(x);
+        assertEquals(list.deleteAtHead(), x);
+        assertEquals(list.head, null);
+        assertEquals(list.tail, null);
+    }
+
+    @Test
+    public void testDeleteAtHeadMultipleElementList()
+    {
+        Node<Integer>x = new Node<Integer>(new Integer(5));
+        Node<Integer>y = new Node<Integer>(new Integer(10));
+        Node<Integer>z = new Node<Integer>(new Integer(15));
+
+        list.insertAtEnd(x);
+        list.insertAtEnd(y);
+        list.insertAtEnd(z);
+
+        assertEquals(list.deleteAtHead(), x);
+        assertEquals(list.deleteAtHead(), y);
+        assertEquals(list.deleteAtHead(), z);
+    }
+
+    @Test
     public void testEmptyIterator()
     {
         Iterator<Integer> it = list.iterator();
@@ -104,4 +130,5 @@ public class testList
         assertEquals(it.next(), (Integer)15);
         assertFalse(it.hasNext());
     }
+
 }

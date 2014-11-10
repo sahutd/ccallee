@@ -35,6 +35,20 @@ public class List<T> implements Iterable<T>
         }
     }
 
+    public Node<T> deleteAtHead()
+    {
+        Node<T> temp = head;
+        if (head == tail)
+        {
+            head = tail = null;
+        }
+        else
+        {
+            head = head.getNext();
+        }
+        return temp;
+    }
+
     @Override
     public Iterator<T> iterator()
     {
