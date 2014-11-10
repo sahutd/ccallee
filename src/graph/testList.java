@@ -4,7 +4,6 @@ import org.junit.*;
 import static org.junit.Assert.*;
 import java.util.Iterator;
 
-import ccallee.graph.*;
 
 public class testList
 {
@@ -23,7 +22,34 @@ public class testList
     }
 
     @Test
-    public void insertOnceIntoList()
+    public void insertOnceIntoListAtHead()
+    {
+        Node<Integer>x = new Node<Integer>(new Integer(5));
+        list.insertAtHead(x);
+        assertEquals(list.head, x);
+        assertEquals(list.tail, x);
+    }
+
+    @Test
+    public void insertMultipleIntoListAtHead()
+    {
+        Node<Integer>x = new Node<Integer>(new Integer(5));
+        Node<Integer>y = new Node<Integer>(new Integer(10));
+        Node<Integer>z = new Node<Integer>(new Integer(15));
+
+        list.insertAtHead(x);
+        list.insertAtHead(y);
+        list.insertAtHead(z);
+
+        assertEquals(list.head, z);
+        assertEquals(list.tail, x);
+
+        assertEquals(z.getNext(), y);
+        assertEquals(y.getNext(), x);
+    }
+
+    @Test
+    public void insertOnceIntoListAtEnd()
     {
         Node<Integer>x = new Node<Integer>(new Integer(5));
         list.insertAtEnd(x);
@@ -32,7 +58,7 @@ public class testList
     }
 
     @Test
-    public void insertMultipleIntoList()
+    public void insertMultipleIntoListAtEnd()
     {
         Node<Integer>x = new Node<Integer>(new Integer(5));
         Node<Integer>y = new Node<Integer>(new Integer(10));
