@@ -15,14 +15,14 @@ public class testList
     }
 
     @Test
-    public void checkEmptyList()
+    public void testEmptyList()
     {
         assertEquals(list.head, null);
         assertEquals(list.tail, null);
     }
 
     @Test
-    public void insertOnceIntoListAtHead()
+    public void testInsertOnceIntoListAtHead()
     {
         Node<Integer>x = new Node<Integer>(new Integer(5));
         list.insertAtHead(x);
@@ -31,7 +31,7 @@ public class testList
     }
 
     @Test
-    public void insertMultipleIntoListAtHead()
+    public void testInsertMultipleIntoListAtHead()
     {
         Node<Integer>x = new Node<Integer>(new Integer(5));
         Node<Integer>y = new Node<Integer>(new Integer(10));
@@ -49,7 +49,7 @@ public class testList
     }
 
     @Test
-    public void insertOnceIntoListAtEnd()
+    public void testInsertOnceIntoListAtEnd()
     {
         Node<Integer>x = new Node<Integer>(new Integer(5));
         list.insertAtEnd(x);
@@ -58,7 +58,7 @@ public class testList
     }
 
     @Test
-    public void insertMultipleIntoListAtEnd()
+    public void testInsertMultipleIntoListAtEnd()
     {
         Node<Integer>x = new Node<Integer>(new Integer(5));
         Node<Integer>y = new Node<Integer>(new Integer(10));
