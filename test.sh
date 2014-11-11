@@ -16,10 +16,15 @@ src/graph/testFunction.java \
 src/graph/testGraphNode.java \
 src/graph/testFunctionGraph.java
 
+javac -sourcepath . -d . \
+src/parser/Stack.java \
+src/parser/testStack.java
+
 java org.junit.runner.JUnitCore \
 ccallee.graph.testVariable \
 ccallee.graph.testList \
 ccallee.graph.testArgumentList \
 ccallee.graph.testFunction \
 ccallee.graph.testGraphNode \
-ccallee.graph.testFunctionGraph
+ccallee.graph.testFunctionGraph \
+ccallee.parser.testStack
