@@ -10,6 +10,11 @@ public class List<T> implements Iterable<T>
     {
     }
 
+    public Node<T> getHead()
+    {
+        return this.head;
+    }
+
     public void insertAtHead(Node<T> temp)
     {
         if (head == null && tail == null)

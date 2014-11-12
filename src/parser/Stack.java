@@ -22,4 +22,9 @@ public class Stack<T>
     {
         return myList.deleteAtHead().getKey();
     }
+
+    public boolean isEmpty()
+    {
+        return myList.getHead() == null;
+    }
 }

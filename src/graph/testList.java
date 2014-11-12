@@ -22,6 +22,13 @@ public class testList
     }
 
     @Test
+    public void testGetHead()
+    {
+        assertEquals(list.getHead(), null);
+        Node<Integer>x = new Node<Integer>(new Integer(5));
+    }
+
+    @Test
     public void testInsertOnceIntoListAtHead()
     {
         Node<Integer>x = new Node<Integer>(new Integer(5));

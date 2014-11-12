@@ -22,4 +22,12 @@ public class testStack
         assertEquals(myStack.pop().charValue(), 'b');
         assertEquals(myStack.pop().charValue(), 'a');
     }
+
+    @Test
+    public void testIsEmpty()
+    {
+        assertTrue(myStack.isEmpty());
+        myStack.push('a');
+        assertFalse(myStack.isEmpty());
+    }
 }
